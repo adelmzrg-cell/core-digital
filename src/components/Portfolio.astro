@@ -1,0 +1,66 @@
+---
+const projects = [
+  {
+    title: 'E-commerce Mode',
+    category: 'Site web',
+    gradient: 'from-purple-500/20 to-neon/20',
+  },
+  {
+    title: 'Restaurant Le Gourmet',
+    category: 'Site + Google Ads',
+    gradient: 'from-orange-500/20 to-red-500/20',
+  },
+  {
+    title: 'Cabinet Comptable',
+    category: 'Site + SEO',
+    gradient: 'from-neon/20 to-blue-500/20',
+  },
+  {
+    title: 'Coach Sportif',
+    category: 'Réseaux sociaux',
+    gradient: 'from-green-500/20 to-teal-500/20',
+  },
+];
+---
+
+<section id="realisations" class="section-padding">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <span class="text-neon text-sm font-semibold tracking-widest uppercase mb-4 block">Portfolio</span>
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">Voir nos réalisations</h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-6 lg:gap-8 reveal-stagger">
+      {projects.map((project) => (
+        <div class="reveal-child group relative rounded-2xl overflow-hidden border border-dark-border
+                    bg-dark-card aspect-[4/3] cursor-pointer card-hover">
+          <!-- Gradient background -->
+          <div class={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-50
+                       group-hover:opacity-80 transition-opacity duration-500`}></div>
+
+          <!-- Content overlay -->
+          <div class="absolute inset-0 flex flex-col justify-end p-8">
+            <span class="text-sm text-neon font-medium mb-2">{project.category}</span>
+            <h3 class="text-2xl font-bold">{project.title}</h3>
+          </div>
+
+          <!-- Hover overlay -->
+          <div class="absolute inset-0 bg-neon/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+      ))}
+    </div>
+
+    <!-- QR Code placeholder -->
+    <div class="mt-16 text-center reveal">
+      <div class="inline-flex flex-col items-center gap-4 p-8 rounded-2xl border border-dashed border-dark-border">
+        <div class="w-32 h-32 rounded-xl bg-dark-card border border-dark-border flex items-center justify-center">
+          <svg class="w-12 h-12 text-gray-mid" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 013.75 9.375v-4.5zM3.75 14.625c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5a1.125 1.125 0 01-1.125-1.125v-4.5zM13.5 4.875c0-.621.504-1.125 1.125-1.125h4.5c.621 0 1.125.504 1.125 1.125v4.5c0 .621-.504 1.125-1.125 1.125h-4.5A1.125 1.125 0 0113.5 9.375v-4.5z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 6.75h.75v.75h-.75v-.75zM6.75 16.5h.75v.75h-.75v-.75zM16.5 6.75h.75v.75h-.75v-.75zM13.5 13.5h.75v.75h-.75v-.75zM13.5 19.5h.75v.75h-.75v-.75zM19.5 13.5h.75v.75h-.75v-.75zM19.5 19.5h.75v.75h-.75v-.75zM16.5 16.5h.75v.75h-.75v-.75z"/>
+          </svg>
+        </div>
+        <span class="text-sm text-gray-mid">Espace réservé pour QR code</span>
+      </div>
+    </div>
+  </div>
+</section>

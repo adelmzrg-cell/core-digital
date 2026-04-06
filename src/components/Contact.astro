@@ -1,0 +1,189 @@
+---
+const serviceOptions = [
+  'Création de site web',
+  'Campagne Google Ads',
+  'Gestion réseaux sociaux',
+  'Pack complet',
+  'Autre',
+];
+---
+
+<section id="contact" class="section-padding relative overflow-hidden">
+  <!-- Background -->
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-dark/50 to-dark pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto relative">
+    <div class="text-center mb-16 reveal">
+      <span class="text-neon text-sm font-semibold tracking-widest uppercase mb-4 block">Parlons de votre projet</span>
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">Contact</h2>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-20">
+      <!-- Left: WhatsApp + Info -->
+      <div class="reveal flex flex-col justify-center">
+        <div class="space-y-8">
+          <div>
+            <h3 class="text-2xl font-bold mb-4">Contactez-nous directement</h3>
+            <p class="text-gray-light leading-relaxed mb-8">
+              Réponse rapide garantie. Appelez, envoyez un message WhatsApp, ou remplissez le formulaire.
+            </p>
+          </div>
+
+          <a href="https://wa.me/33627237593" target="_blank" rel="noopener"
+             class="group flex items-center gap-5 p-5 rounded-2xl border border-dark-border bg-dark-card
+                    hover:border-green-500/30 hover:bg-green-500/5 transition-all duration-300">
+            <div class="w-14 h-14 rounded-2xl bg-green-500/10 border border-green-500/20
+                        flex items-center justify-center text-green-400 shrink-0
+                        group-hover:bg-green-500/20 transition-colors duration-300">
+              <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <div>
+              <div class="text-sm text-gray-mid mb-1">WhatsApp</div>
+              <div class="text-xl font-bold">06 27 23 75 93</div>
+            </div>
+          </a>
+
+          <a href="tel:+33627237593"
+             class="group flex items-center gap-5 p-5 rounded-2xl border border-dark-border bg-dark-card
+                    hover:border-neon/30 hover:bg-neon/5 transition-all duration-300">
+            <div class="w-14 h-14 rounded-2xl bg-neon/10 border border-neon/20
+                        flex items-center justify-center text-neon shrink-0
+                        group-hover:bg-neon/20 transition-colors duration-300">
+              <svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="text-sm text-gray-mid mb-1">Téléphone</div>
+              <div class="text-xl font-bold">06 27 23 75 93</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right: Form -->
+      <div class="reveal" style="transition-delay: 0.15s;">
+        <form id="contact-form" class="bg-dark-card border border-dark-border rounded-2xl p-8 lg:p-10 space-y-5">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label for="nom" class="block text-sm text-gray-light mb-2">Nom</label>
+              <input type="text" id="nom" name="nom" required
+                     class="input-glow w-full bg-dark border border-dark-border rounded-xl px-4 py-3
+                            text-white placeholder-gray-mid transition-all duration-300"
+                     placeholder="Votre nom" />
+            </div>
+            <div>
+              <label for="prenom" class="block text-sm text-gray-light mb-2">Prénom</label>
+              <input type="text" id="prenom" name="prenom" required
+                     class="input-glow w-full bg-dark border border-dark-border rounded-xl px-4 py-3
+                            text-white placeholder-gray-mid transition-all duration-300"
+                     placeholder="Votre prénom" />
+            </div>
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm text-gray-light mb-2">Email</label>
+            <input type="email" id="email" name="email" required
+                   class="input-glow w-full bg-dark border border-dark-border rounded-xl px-4 py-3
+                          text-white placeholder-gray-mid transition-all duration-300"
+                   placeholder="votre@email.com" />
+          </div>
+
+          <div>
+            <label for="telephone" class="block text-sm text-gray-light mb-2">Téléphone</label>
+            <input type="tel" id="telephone" name="telephone"
+                   class="input-glow w-full bg-dark border border-dark-border rounded-xl px-4 py-3
+                          text-white placeholder-gray-mid transition-all duration-300"
+                   placeholder="06 00 00 00 00" />
+          </div>
+
+          <div>
+            <label for="service" class="block text-sm text-gray-light mb-2">Service</label>
+            <select id="service" name="service" required
+                    class="input-glow w-full bg-dark border border-dark-border rounded-xl px-4 py-3
+                           text-white transition-all duration-300 appearance-none cursor-pointer"
+                    style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22 fill=%22%23A0A0B0%22 viewBox=%220 0 16 16%22><path d=%22M8 11L3 6h10l-5 5z%22/></svg>'); background-repeat: no-repeat; background-position: right 12px center;">
+              <option value="" disabled selected class="text-gray-mid">Choisir un service</option>
+              {serviceOptions.map(opt => (
+                <option value={opt}>{opt}</option>
+              ))}
+            </select>
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm text-gray-light mb-2">Message</label>
+            <textarea id="message" name="message" rows="4"
+                      class="input-glow w-full bg-dark border border-dark-border rounded-xl px-4 py-3
+                             text-white placeholder-gray-mid transition-all duration-300 resize-none"
+                      placeholder="Décrivez votre projet..."></textarea>
+          </div>
+
+          <button type="submit" id="submit-btn"
+                  class="btn-primary w-full justify-center text-base py-4 mt-2">
+            Envoyer ma demande
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"/>
+            </svg>
+          </button>
+
+          <div id="form-success" class="hidden text-center py-4">
+            <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-green-500/10 border border-green-500/30
+                        flex items-center justify-center">
+              <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"/>
+              </svg>
+            </div>
+            <h4 class="text-xl font-bold mb-2">Demande envoyée !</h4>
+            <p class="text-gray-light">Nous vous répondrons sous 24h.</p>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const submitBtn = document.getElementById('submit-btn');
+  const successDiv = document.getElementById('form-success');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    if (!submitBtn || !successDiv) return;
+
+    submitBtn.textContent = 'Envoi en cours...';
+    (submitBtn as HTMLButtonElement).disabled = true;
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: `${data.prenom} ${data.nom}`,
+          email: data.email,
+          phone: data.telephone,
+          message: `[Service: ${data.service}] ${data.message || ''}`,
+        }),
+      });
+
+      if (res.ok) {
+        form.querySelectorAll('input, select, textarea, button').forEach(el => {
+          (el as HTMLElement).style.display = 'none';
+        });
+        form.querySelectorAll('label').forEach(el => el.style.display = 'none');
+        form.querySelectorAll('.grid').forEach(el => (el as HTMLElement).style.display = 'none');
+        successDiv.classList.remove('hidden');
+      } else {
+        throw new Error('Erreur serveur');
+      }
+    } catch {
+      submitBtn.innerHTML = 'Envoyer ma demande';
+      (submitBtn as HTMLButtonElement).disabled = false;
+      alert('Une erreur est survenue. Contactez-nous par WhatsApp.');
+    }
+  });
+</script>

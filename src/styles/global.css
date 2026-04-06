@@ -1,0 +1,175 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon: #00D4FF;
+  --color-neon-dim: #00D4FF33;
+  --color-dark: #0B0F1A;
+  --color-dark-card: #0F1420;
+  --color-dark-border: #1A1F2E;
+  --color-white: #FFFFFF;
+  --color-gray-light: #A0A0B0;
+  --color-gray-mid: #6B7280;
+
+  --font-sans: 'Inter', 'SF Pro Display', system-ui, -apple-system, sans-serif;
+
+  --ease-apple: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* ── Base ──────────────────────────────────────────── */
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #000000;
+  color: var(--color-white);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+::selection {
+  background: var(--color-neon);
+  color: #000;
+}
+
+/* ── Scroll Reveal ─────────────────────────────────── */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s var(--ease-apple), transform 0.8s var(--ease-apple);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Glow Effects ──────────────────────────────────── */
+
+.glow-neon {
+  box-shadow: 0 0 30px var(--color-neon-dim), 0 0 60px #00D4FF15;
+}
+
+.glow-text {
+  text-shadow: 0 0 40px var(--color-neon-dim);
+}
+
+/* ── Glass Effect ──────────────────────────────────── */
+
+.glass {
+  background: rgba(11, 15, 26, 0.7);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── Laptop Float Animation ────────────────────────── */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotateX(2deg) rotateY(-3deg); }
+  50% { transform: translateY(-20px) rotateX(2deg) rotateY(-3deg); }
+}
+
+.laptop-float {
+  animation: float 6s var(--ease-apple) infinite;
+  perspective: 1000px;
+}
+
+/* ── Gradient Background Orbs ──────────────────────── */
+
+@keyframes orbit {
+  0% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -30px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.3;
+  animation: orbit 15s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ── Card Hover ────────────────────────────────────── */
+
+.card-hover {
+  transition: transform 0.4s var(--ease-apple), box-shadow 0.4s var(--ease-apple);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 212, 255, 0.1), 0 0 0 1px rgba(0, 212, 255, 0.15);
+}
+
+/* ── Focus Glow on Inputs ──────────────────────────── */
+
+.input-glow:focus {
+  outline: none;
+  border-color: var(--color-neon);
+  box-shadow: 0 0 0 3px var(--color-neon-dim), 0 0 20px #00D4FF15;
+}
+
+/* ── CTA Button Pulse ──────────────────────────────── */
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px #00D4FF30; }
+  50% { box-shadow: 0 0 40px #00D4FF50, 0 0 80px #00D4FF20; }
+}
+
+.btn-primary {
+  background: var(--color-neon);
+  color: #000;
+  font-weight: 600;
+  border-radius: 980px;
+  padding: 14px 32px;
+  transition: all 0.3s var(--ease-apple);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  transform: scale(1.04);
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-neon);
+  font-weight: 500;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  border-radius: 980px;
+  padding: 14px 32px;
+  transition: all 0.3s var(--ease-apple);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background: rgba(0, 212, 255, 0.08);
+  border-color: var(--color-neon);
+  transform: scale(1.04);
+}
+
+/* ── Section Spacing ───────────────────────────────── */
+
+.section-padding {
+  padding: 120px 24px;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding: 80px 16px;
+  }
+}

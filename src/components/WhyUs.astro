@@ -1,0 +1,55 @@
+---
+const reasons = [
+  {
+    icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z"/>
+    </svg>`,
+    title: 'Résultats rapides si nécessaire',
+    description: 'Des campagnes qui génèrent des résultats dès les premiers jours.',
+  },
+  {
+    icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+    </svg>`,
+    title: 'Accompagnement sur le long terme',
+    description: 'Un suivi continu pour optimiser et faire croître vos résultats dans la durée.',
+  },
+  {
+    icon: `<svg class="w-7 h-7" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+    </svg>`,
+    title: 'Solutions adaptées aux entreprises locales',
+    description: 'Des stratégies pensées pour le marché local, avec un budget maîtrisé.',
+  },
+];
+---
+
+<section id="pourquoi" class="section-padding relative overflow-hidden">
+  <!-- Background accent -->
+  <div class="absolute inset-0 bg-gradient-to-b from-transparent via-neon/[0.02] to-transparent pointer-events-none"></div>
+
+  <div class="max-w-4xl mx-auto relative">
+    <div class="text-center mb-16 reveal">
+      <span class="text-neon text-sm font-semibold tracking-widest uppercase mb-4 block">Notre différence</span>
+      <h2 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight">Pourquoi nous</h2>
+    </div>
+
+    <div class="space-y-6 reveal-stagger">
+      {reasons.map((reason) => (
+        <div class="reveal-child group flex gap-6 items-start p-6 lg:p-8 rounded-2xl
+                    border border-transparent hover:border-dark-border hover:bg-dark-card/50
+                    transition-all duration-500">
+          <div class="shrink-0 w-14 h-14 rounded-2xl bg-neon/10 border border-neon/20
+                      flex items-center justify-center text-neon
+                      group-hover:bg-neon/20 transition-colors duration-300"
+               set:html={reason.icon} />
+          <div>
+            <h3 class="text-xl font-bold mb-2">{reason.title}</h3>
+            <p class="text-gray-light leading-relaxed">{reason.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
